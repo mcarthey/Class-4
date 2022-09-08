@@ -10,12 +10,12 @@ namespace Class_4.Dao
     {
         public void Read()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Reading the database!");
         }
 
         public void Write()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Writing the database!");
         }
     }
 }

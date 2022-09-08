@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Class_4.Dao;
+using Class_4.Services;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 namespace Class_4
@@ -19,6 +21,9 @@ namespace Class_4
                 builder.AddConsole();
                 builder.AddFile("app.log");
             });
+
+            services.AddSingleton<IDataService, DataService>();
+            services.AddSingleton<IDataDao, DatabaseDao>();
         }
     }
 }

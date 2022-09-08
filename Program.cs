@@ -1,5 +1,6 @@
 ﻿using Class_4.Dao;
-using System;
+using Class_4.Services;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Class_4
 {
@@ -11,10 +12,23 @@ namespace Class_4
             //ExceptionClass.ExampleMethod();
 
             // Second example from class: Interfaces
-            IDataDao dao = new FileDao();
-            dao.Read();
-            dao.Write();
 
+            // Register services, logging, interfaces
+            IServiceCollection service = new ServiceCollection();
+            var startup = new Startup();
+            startup.ConfigureServices(service);
+
+            // moved from Main() to DataService class
+            //IDataDao dao = new FileDao();
+            //dao.Read();
+            //dao.Write();
+
+            // create service provider
+            var serviceProvider = service.BuildServiceProvider();
+
+            // get service and calling method
+            var dataService = serviceProvider.GetService<IDataService>();
+            dataService?.Invoke();
         }
     }
 }
