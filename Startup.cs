@@ -5,7 +5,6 @@ namespace Class_4
 {
     /// <summary>
     /// Install the following Nuget packages:
-    ///     Microsoft.Extensions.Logging
     ///     Microsoft.Extensions.Logging.Console
     ///     NReco.Logging.File
     /// </summary>
