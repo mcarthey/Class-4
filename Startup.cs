@@ -1,13 +1,14 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Class_4
 {
+    /// <summary>
+    /// Install the following Nuget packages:
+    ///     Microsoft.Extensions.Logging
+    ///     Microsoft.Extensions.Logging.Console
+    ///     NReco.Logging.File
+    /// </summary>
     public class Startup
     {
         public void ConfigureServices(IServiceCollection services)
